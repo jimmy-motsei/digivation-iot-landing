@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import Reveal from './Reveal'
 
 const stats = [
   { num: '2km', label: 'LoRaWAN range' },
@@ -31,9 +30,6 @@ export default function Hero() {
     <>
       {/* Hero */}
       <div className="bg-dark grid grid-cols-1 lg:grid-cols-[55%_45%] min-h-[580px] relative overflow-hidden">
-        {/* Diagonal overlay */}
-        <div className="hidden lg:block absolute top-0 right-0 w-0 h-0 border-solid z-[2]"
-          style={{ borderWidth: '580px 0 0 120px', borderColor: 'transparent transparent transparent #0d1f0f' }} />
 
         {/* Left */}
         <div className="px-[5%] py-20 relative z-[3]">
