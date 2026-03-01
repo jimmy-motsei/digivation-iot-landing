@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+export const runtime = 'nodejs'
 
 export async function POST(req: NextRequest) {
   const { firstName, surname, farmName, province, cropType, mobile, email } = await req.json()
@@ -9,6 +9,9 @@ export async function POST(req: NextRequest) {
   if (!firstName || !email) {
     return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
   }
+
+  // Lazy init so build-time evaluation doesn't throw without the env var
+  const resend = new Resend(process.env.RESEND_API_KEY)
 
   try {
     await resend.emails.send({
