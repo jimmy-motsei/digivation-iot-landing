@@ -14,7 +14,7 @@ export default function Footer() {
     <footer className="bg-dark2 px-[5%] py-10 border-t-[3px] border-lime grid grid-cols-1 lg:grid-cols-[auto_1fr_auto] items-center gap-8 text-center lg:text-left">
       <div>
         <Image
-          src="/digivation-logo.png"
+          src="/digivation-logo-transparent.png"
           alt="Digivation"
           width={96}
           height={24}

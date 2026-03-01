@@ -31,7 +31,7 @@ export default function Nav() {
       <nav className="sticky top-0 z-[1000] bg-white border-b-[3px] border-lime px-[5%] flex items-center justify-between min-h-[72px] shadow-[0_2px_12px_rgba(0,0,0,0.08)]">
         <Link href="https://digivation.global/" className="flex-shrink-0">
           <Image
-            src="/digivation-logo.png"
+            src="/digivation-logo-transparent.png"
             alt="Digivation"
             width={120}
             height={32}
